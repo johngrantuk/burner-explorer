@@ -9,11 +9,12 @@
 <% include ../partials/nav.ejs %>
 
 <div class="container">
-<h2>Database Results</h2>
+<h2><%= results.length %> Wallet Addresses</h2>
 
 <ul>
     <% results.forEach(function(r) { %>
-        <li><%= r.created_at %> <%= r.account %> TEST</li>
+        <li><%= r.created_at.toDateString() %> - <%= r.account %> <a target="_blank" href="https://blockscout.com/poa/dai/address/<%= r.account %>/transactions"><%= r.account %></a></li>
+
     <% }); %>
 </ul>
 
