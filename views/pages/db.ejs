@@ -13,7 +13,7 @@
 
 <ul>
     <% results.forEach(function(r) { %>
-        <li><%= r.created_at.toDateString() %> - <%= r.account %> <a target="_blank" href="https://blockscout.com/poa/dai/address/<%= r.account %>/transactions"><%= r.account %></a></li>
+        <li><%= r.created_at.toDateString() %> - <a target="_blank" href="https://blockscout.com/poa/dai/address/<%= r.account %>/transactions"><%= r.account %></a></li>
 
     <% }); %>
 </ul>
